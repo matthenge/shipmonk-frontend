@@ -89,7 +89,7 @@
     </div> <!-- row -->
     <div class="row">
       <div class="col-lg-12">
-        <div class="about-image mt-60 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+        <div class="about-image wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
           <img src="assets/images/packages.svg" alt="about" width="500" height="300">
         </div> <!-- about image -->
       </div>
@@ -112,40 +112,16 @@
       <h3>Featured Spaces</h3>
     </div>
     <div class="flex-spaces">
-      <div class="blog-author d-flex align-items-center">
-        <div class="author-image">
-          <img src="assets/images/author-1.jpg" alt="author">
-        </div>
-        <div class="author-content media-body">
-          <h6 class="sub-title">Posted by</h6>
-          <p class="text">Isabela Moreira</p>
-        </div>
-      </div>
-      <div class="blog-author d-flex align-items-center">
-        <div class="author-image">
-          <img src="assets/images/author-1.jpg" alt="author">
-        </div>
-        <div class="author-content media-body">
-          <h6 class="sub-title">Posted by</h6>
-          <p class="text">Isabela Moreira</p>
-        </div>
-      </div>
-      <div class="blog-author d-flex align-items-center">
-        <div class="author-image">
-          <img src="assets/images/author-1.jpg" alt="author">
-        </div>
-        <div class="author-content media-body">
-          <h6 class="sub-title">Posted by</h6>
-          <p class="text">Isabela Moreira</p>
-        </div>
-      </div>
-      <div class="blog-author d-flex align-items-center">
-        <div class="author-image">
-          <img src="assets/images/author-1.jpg" alt="author">
-        </div>
-        <div class="author-content media-body">
-          <h6 class="sub-title">Posted by</h6>
-          <p class="text">Isabela Moreira</p>
+      <div *ngFor="let space of spaces; index as i;">
+        <div class="blog-author d-flex align-items-center">
+          <div class="author-image">
+            <img src="{{space.album[0]}}" alt="author">
+          </div>
+          <div class="author-content media-body">
+            <p class="text">{{space.title}}</p>
+            <h6 class="sub-title">{{space.city}}</h6>
+            <h6 class="sub-title">{{space.storage_size}}</h6>
+          </div>
         </div>
       </div>
     </div>

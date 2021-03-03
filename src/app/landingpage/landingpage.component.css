@@ -3067,7 +3067,9 @@ p {
 }
 
 .author-image img {
-  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 5%;
 }
 
 .blog-author {
@@ -3080,7 +3082,7 @@ p {
 
 .author-content .sub-title {
   font-size: 14px;
-  color: #f14836;
+  color: #222222;
   font-weight: 400;
 }
 
@@ -3094,14 +3096,15 @@ p {
   background-color: #f6f6f6;
   align-items: center;
   justify-content: center;
-  padding: 3% 20%;
+  padding: 3% 10%;
 }
 
 .blog-author {
   border-radius: 4px;
   border: 1px solid white;
   background-color: white;
-  height: 160px;
+  /*height: 160px;*/
+  width: 350px;
   margin-top: 2%;
   margin-right: 20px;
   flex: 40%;
